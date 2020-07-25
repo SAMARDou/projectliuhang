@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/settingbackground"
+    android:orientation="horizontal"
+    android:paddingTop="50dp">
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:orientation="vertical">
+
+            <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="match_parent"
+                            android:text="喂棉马达比例阀"
+                            android:textSize="17sp"
+                            android:gravity="center" />
+                        <android_serialport_api.UIwidget.RegionNumberEditText
+                            android:id="@+id/weimianmada_valve"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center"
+                            android:maxLength="3"
+                            android:text="000"
+                            android:inputType="number"
+                            android:textColor="@color/data_presentation"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/stroke_corner_right"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="碎棉马达比例阀"
+                    android:textSize="17sp"
+                    android:gravity="center" />
+                <android_serialport_api.UIwidget.RegionNumberEditText
+                    android:id="@+id/suimianmada_valve"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:maxLength="3"
+                    android:text="000"
+                    android:inputType="number"
+                    android:textColor="@color/data_presentation"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/stroke_corner_right"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="排棉马达比例阀"
+                    android:textSize="17sp"
+                    android:gravity="center" />
+                <android_serialport_api.UIwidget.RegionNumberEditText
+                    android:id="@+id/paimianmada_valve"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:maxLength="3"
+                    android:text="000"
+                    android:inputType="number"
+                    android:textColor="@color/data_presentation"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/stroke_corner_right"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="打包泵比例阀"
+                    android:textSize="17sp"
+                    android:gravity="center" />
+                <android_serialport_api.UIwidget.RegionNumberEditText
+                    android:id="@+id/dabaobeng_valve"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:maxLength="3"
+                    android:text="000"
+                    android:inputType="number"
+                    android:textColor="@color/data_presentation"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/stroke_corner_right"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="摇臂油缸伸出比例阀"
+                    android:textSize="17sp"
+                    android:gravity="center" />
+                <android_serialport_api.UIwidget.RegionNumberEditText
+                    android:id="@+id/baibiyougangshengchu_valve"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:maxLength="3"
+                    android:text="000"
+                    android:inputType="number"
+                    android:textColor="@color/data_presentation"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/stroke_corner_right"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="卸模伸出比例阀"
+                    android:textSize="17sp"
+                    android:gravity="center" />
+                <android_serialport_api.UIwidget.RegionNumberEditText
+                    android:id="@+id/xiemoshengchu_valve"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:maxLength="3"
+                    android:text="000"
+                    android:inputType="number"
+                    android:textColor="@color/data_presentation"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/stroke_corner_right"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="卸模缩回比例阀"
+                    android:textSize="17sp"
+                    android:gravity="center" />
+                <android_serialport_api.UIwidget.RegionNumberEditText
+                    android:id="@+id/xiemosuohui_valve"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:maxLength="3"
+                    android:text="000"
+                    android:inputType="number"
+                    android:textColor="@color/data_presentation"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="RMB门开比例阀"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <android_serialport_api.UIwidget.RegionNumberEditText
+                android:id="@+id/RMBopen_valve"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:maxLength="3"
+                android:text="000"
+                android:inputType="number"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/stroke_corner_right"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="RMB门关比例阀"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <android_serialport_api.UIwidget.RegionNumberEditText
+                android:id="@+id/RMBclose_valve"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:maxLength="3"
+                android:text="000"
+                android:inputType="number"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="初始化总膜数"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <android_serialport_api.UIwidget.RegionNumberEditText
+                android:id="@+id/chushihuamoshu"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:maxLength="3"
+                android:text="000"
+                android:inputType="number"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="棉膜密度kg/m^3"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <android_serialport_api.UIwidget.RegionNumberEditText
+                android:id="@+id/mianmomidu"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:maxLength="3"
+                android:text="000"
+                android:inputType="number"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="圆包调试总开关"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <Switch
+                android:id="@+id/yuanbaotiaoshi_lock"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:switchMinWidth="20dp"
+                android:textOn="on"
+                android:textOff="off"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="摇臂油缸缩回电磁阀"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <Switch
+                android:id="@+id/yaobiyougangsuohui_lock"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:switchMinWidth="20dp"
+                android:textOn="on"
+                android:textOff="off"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="送膜装置缩回电磁阀"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <Switch
+                android:id="@+id/songmosuohui_lock"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:switchMinWidth="20dp"
+                android:textOn="on"
+                android:textOff="off"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="送膜装置伸出电磁阀"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <Switch
+                android:id="@+id/songmoshengchu_lock"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:switchMinWidth="20dp"
+                android:textOn="on"
+                android:textOff="off"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="包膜传送电磁阀"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <Switch
+                android:id="@+id/baomochuansong_lock"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:switchMinWidth="20dp"
+                android:textOn="on"
+                android:textOff="off"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/stroke_corner_right"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="卸模装置伸出电磁阀"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <Switch
+                android:id="@+id/xiemoshengchu_lock"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:switchMinWidth="20dp"
+                android:textOn="on"
+                android:textOff="off"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="卸模装置缩回电磁阀"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <Switch
+                android:id="@+id/xiemosuohui_lock"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:switchMinWidth="20dp"
+                android:textOn="on"
+                android:textOff="off"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="RMB开电磁阀"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <Switch
+                android:id="@+id/RMBopen_lock"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:switchMinWidth="20dp"
+                android:textOn="on"
+                android:textOff="off"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="RMB关电磁阀"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <Switch
+                android:id="@+id/RMBclose_lock"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:switchMinWidth="20dp"
+                android:textOn="on"
+                android:textOff="off"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="系统重大故障电磁阀"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <Switch
+                android:id="@+id/xitongguzhang_lock"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:switchMinWidth="20dp"
+                android:textOn="on"
+                android:textOff="off"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="搅龙开电磁阀"
+                android:textSize="17sp"
+                android:gravity="center" />
+            <Switch
+                android:id="@+id/jiaolongopenclose_lock"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:switchMinWidth="20dp"
+                android:textOn="on"
+                android:textOff="off"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_save_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="保存参数" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

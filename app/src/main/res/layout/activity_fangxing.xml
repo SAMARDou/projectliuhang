@@ -1,0 +1,203 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_jk"
+    android:orientation="horizontal">
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+        <!--<View
+			        android:layout_width="200dip"
+			        android:layout_height="30dip" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="快速性"
+            android:textSize="28dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/line_bottom"/>
+
+		<View
+			android:layout_width="50dip"
+			android:layout_height="5dip" />
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+			<View
+				android:layout_width="60dip"
+				android:layout_height="20dip" />
+			<ImageView
+				android:layout_width="100dp"
+				android:layout_height="300dp"
+				android:layout_gravity="center_horizontal"
+				android:src="@drawable/progressbar_vertical" />
+            
+            <LinearLayout 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical">
+
+				<ImageView
+					android:layout_width="70dp"
+					android:layout_height="70dp"
+					android:src="@drawable/rabbit0" />
+
+				<View
+					android:layout_width="30dip"
+					android:layout_height="160dip" />
+
+				<ImageView
+					android:layout_width="70dp"
+					android:layout_height="70dp"
+					android:src="@drawable/turtle0" />
+	            
+	        </LinearLayout>
+        </LinearLayout>
+
+		<View
+			android:layout_width="20dip"
+			android:layout_height="30dip" />
+
+		<EditText
+			android:id="@+id/kuaisuxing"
+			android:layout_width="fill_parent"
+			android:layout_height="50dp"
+			android:layout_gravity="center"
+			android:ems="10"
+			android:text="0">
+
+			<requestFocus />
+		</EditText>
+	    <!--<View
+			 android:layout_width="20dip"
+		     android:layout_height="20dip" />-->
+
+		<ImageView
+			android:layout_width="122dp"
+			android:layout_height="50dp"
+			android:layout_gravity="center_horizontal"
+			android:src="@drawable/button_confirm" />
+
+    </LinearLayout>
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+	    <!--<View
+			        android:layout_width="200dip"
+			        android:layout_height="30dip" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="敏感性"
+            android:textSize="28dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/line_bottom"/>
+
+		<View
+			android:layout_width="50dip"
+			android:layout_height="5dip" />
+
+		<ImageView
+			android:layout_width="100dp"
+			android:layout_height="300dp"
+			android:layout_gravity="center_horizontal"
+			android:src="@drawable/progressbar_vertical" />
+        <View
+			        android:layout_width="50dip"
+			        android:layout_height="30dip" />
+
+		<EditText
+			android:id="@+id/minganxing"
+			android:layout_width="fill_parent"
+			android:layout_height="50dp"
+			android:layout_gravity="center"
+			android:ems="10"
+			android:text="0">
+
+			<requestFocus />
+		</EditText>
+	 	<!--<View
+				 android:layout_width="20dip"
+		    	 android:layout_height="20dip" />-->
+
+		<ImageView
+			android:layout_width="122dp"
+			android:layout_height="50dp"
+			android:layout_gravity="center_horizontal"
+			android:src="@drawable/button_confirm" />
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+	    <!--<View
+			        android:layout_width="200dip"
+			        android:layout_height="30dip" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="参考点"
+            android:textSize="28dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/line_bottom"/>
+
+		<View
+			android:layout_width="50dip"
+			android:layout_height="5dip" />
+
+		<ImageView
+			android:layout_width="100dp"
+			android:layout_height="300dp"
+			android:layout_gravity="center_horizontal"
+			android:src="@drawable/collectouming" />
+        <View
+			        android:layout_width="50dip"
+			        android:layout_height="30dip" />
+		<EditText
+			android:id="@+id/cankaodian"
+			android:layout_width="fill_parent"
+			android:layout_height="50dp"
+			android:layout_gravity="center"
+			android:layout_weight="1"
+			android:ems="10"
+			android:text="0">
+
+			<requestFocus />
+		</EditText>
+	    <!--<View
+			 android:layout_width="20dip"
+		     android:layout_height="20dip" />-->
+		<ImageView
+			android:layout_width="122dp"
+			android:layout_height="50dp"
+			android:layout_gravity="center_horizontal"
+			android:src="@drawable/button1_setting" />
+    </LinearLayout>
+</LinearLayout>

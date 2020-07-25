@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="JianWWIndicateProgress">
+        <attr name="progress_height" format="dimension" />
+        <attr name="progress_width" format="dimension" />
+        <attr name="progress_unreachedcolor" format="color" />
+        <attr name="progress_reached_color" format="color" />
+        <attr name="progress_reached_height" format="integer" />
+        <attr name="progress_cheek_width" format="dimension" />
+        <attr name="progress_cheek_color" format="color" />
+        <attr name="progress_reached_textsize" format="dimension" />
+        <attr name="progress_reached_textcolor" format="color" />
+    </declare-styleable>
+</resources>

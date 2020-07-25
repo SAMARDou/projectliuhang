@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/test_background"
+    android:orientation="horizontal"
+    android:paddingTop="50dp">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="2"
+        android:background="@drawable/stroke_corner_right"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="喂棉马达转速传感器电压值"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sensor_voltage_weimianmadarotate"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0000"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:src="@drawable/voltage" />
+            <TextView
+                android:id="@+id/status_sensor_voltage_weimianmadarotate"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="传感器状态"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="碎棉马达转速传感器电压值"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sensor_voltage_suimianmadarotate"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0000"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:src="@drawable/voltage" />
+            <TextView
+                android:id="@+id/status_sensor_voltage_suimianmadarotate"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="传感器状态"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="排棉马达转速传感器电压值"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sensor_voltage_paimianmadarotate"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0000"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:src="@drawable/voltage" />
+            <TextView
+                android:id="@+id/status_sensor_voltage_paimianmadarotate"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="传感器状态"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="上辊马达转速传感器电压值"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sensor_voltage_shanggunmadarotate"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0000"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:src="@drawable/voltage" />
+            <TextView
+                android:id="@+id/status_sensor_voltage_shanggunmadarotate"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="传感器状态"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="下辊马达转速传感器电压值"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sensor_voltage_xiagunmadarotate"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0000"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:src="@drawable/voltage" />
+            <TextView
+                android:id="@+id/status_sensor_voltage_xiagunmadarotate"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="传感器状态"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="棉膜辊马达转速传感器电压值"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sensor_voltage_mianmogunmadarotate"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0000"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:src="@drawable/voltage" />
+            <TextView
+                android:id="@+id/status_sensor_voltage_mianmogunmadarotate"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="传感器状态"
+                android:textColor="@color/data_presentation"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/stroke_corner_right"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+</LinearLayout>

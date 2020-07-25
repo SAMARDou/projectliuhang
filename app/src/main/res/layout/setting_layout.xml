@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/settingbackground"
+	android:orientation="vertical"
+	android:paddingTop="50dp">
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="6.15"
+		android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/stroke_corner_right"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/stroke_corner_right"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="采头报警系数"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/pickingheadwarn_co"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center"
+                            android:text="1.00"
+                            android:inputType="number|numberDecimal"
+                            android:textColor="@color/data_presentation"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="采头行程系数"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/pickingheadroute_co"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center"
+                            android:text="1.00"
+                            android:inputType="number|numberDecimal"
+                            android:textColor="@color/data_presentation"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="采头锁定系数"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/pickingheadlock_co"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center"
+                            android:text="1.00"
+                            android:inputType="number"
+                            android:textColor="@color/data_presentation"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/stroke" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="前采头齿数"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/frontpickinghead_num"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center"
+                            android:text="72"
+                            android:inputType="number|numberDecimal"
+                            android:textColor="@color/data_presentation"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="后采头齿数"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/backpickinghead_num"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center"
+                            android:text="65"
+                            android:inputType="number|numberDecimal"
+                            android:textColor="@color/data_presentation"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="采头输入齿数"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/pickingheadinput_num"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center"
+                            android:text="44"
+                            android:inputType="number|numberDecimal"
+                            android:textColor="@color/data_presentation"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginRight="2.5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="左采头输入转速"
+                            android:textSize="20sp"
+                            android:gravity="center" />
+                        <TextView
+                            android:id="@+id/leftpickingheadinput_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="采头前1转速"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/frontpickinghead1_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="采头后1转速"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/backpickinghead1_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="采头前2转速"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/frontpickinghead2_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="采头后2转速"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/backpickinghead2_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="采头前3转速"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/frontpickinghead3_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="采头后3转速"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/backpickinghead3_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="2.5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="右采头输入转速"
+                            android:textSize="20sp"
+                            android:gravity="center" />
+                        <TextView
+                            android:id="@+id/rightpickingheadinput_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="采头前4转速"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/frontpickinghead4_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="采头后4转速"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/backpickinghead4_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="采头前5转速"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/frontpickinghead5_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="采头后5转速"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/backpickinghead5_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="采头前6转速"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/frontpickinghead6_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_corner_right"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="采头后6转速"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/backpickinghead6_rs"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="1000"
+                            android:textSize="20sp"
+                            android:textColor="@color/data_presentation"
+                            android:gravity="center" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rmin"
+                            android:gravity="right"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="0.9"
+            android:layout_marginRight="10dp"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_marginBottom="5dp"
+				android:layout_weight="1"
+				android:background="@drawable/stroke_corner"
+				android:orientation="horizontal">
+
+				<ImageView
+					android:layout_width="80dp"
+					android:layout_height="40dp"
+					android:layout_gravity="center"
+					android:src="@drawable/id" />
+
+				<EditText
+					android:id="@+id/car_id"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginRight="5dp"
+					android:layout_marginTop="5dp"
+					android:gravity="center"
+					android:text="0001"
+					android:inputType="number|numberDecimal"
+					android:textColor="@color/data_presentation"
+					android:textSize="25sp" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_marginBottom="5dp"
+				android:layout_weight="1"
+				android:background="@drawable/stroke_corner"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="130dp"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:text="水路压力系数"
+					android:textSize="20sp" />
+
+				<EditText
+					android:id="@+id/waterpressure_co"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginRight="5dp"
+					android:layout_marginTop="5dp"
+					android:gravity="center"
+					android:text="1.00"
+					android:inputType="number|numberDecimal"
+					android:textColor="@color/data_presentation"
+					android:textSize="25sp" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_marginBottom="5dp"
+				android:layout_weight="1"
+				android:background="@drawable/stroke_corner"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="130dp"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:text="行走速度系数"
+					android:textSize="20sp" />
+
+				<EditText
+					android:id="@+id/speed_co"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginRight="5dp"
+					android:layout_marginTop="5dp"
+					android:gravity="center"
+					android:text="1.00"
+					android:inputType="number|numberDecimal"
+					android:textColor="@color/data_presentation"
+					android:textSize="25sp" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_marginBottom="5dp"
+				android:layout_weight="1"
+				android:background="@drawable/stroke_corner"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="130dp"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:text="风机转速系数"
+					android:textSize="20sp" />
+
+				<EditText
+					android:id="@+id/fanrotatespeed_co"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginRight="5dp"
+					android:layout_marginTop="5dp"
+					android:gravity="center"
+					android:text="1.00"
+					android:inputType="number|numberDecimal"
+					android:textColor="@color/data_presentation"
+					android:textSize="25sp" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_marginBottom="5dp"
+				android:layout_weight="1"
+				android:background="@drawable/stroke_corner"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="130dp"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:text="收获面积系数"
+					android:textSize="20sp" />
+
+				<EditText
+					android:id="@+id/area_co"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginRight="5dp"
+					android:layout_marginTop="5dp"
+					android:gravity="center"
+					android:text="1.00"
+					android:inputType="number|numberDecimal"
+					android:textColor="@color/data_presentation"
+					android:textSize="25sp" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_marginBottom="5dp"
+				android:layout_weight="1"
+				android:background="@drawable/stroke_corner"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="130dp"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:text="推杆比例系数"
+					android:textSize="20sp" />
+
+				<EditText
+					android:id="@+id/pushrod_co"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginRight="5dp"
+					android:layout_marginTop="5dp"
+					android:gravity="center"
+					android:text="1.00"
+					android:inputType="number|numberDecimal"
+					android:textColor="@color/data_presentation"
+					android:textSize="25sp" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_marginBottom="5dp"
+				android:layout_weight="1"
+				android:background="@drawable/stroke_corner"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="130dp"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:text="转速系数"
+					android:textSize="20sp" />
+
+				<EditText
+					android:id="@+id/rotatespeed_co"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginRight="5dp"
+					android:layout_marginTop="5dp"
+					android:gravity="center"
+					android:text="1.00"
+					android:inputType="number|numberDecimal"
+					android:textColor="@color/data_presentation"
+					android:textSize="25sp" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="0.8"
+                android:orientation="horizontal">
+				<Button
+					android:id="@+id/btn_save"
+					android:layout_width="0dp"
+                    android:layout_weight="1"
+					android:layout_height="match_parent"
+					android:text="保存参数" />
+                <Button
+                    android:id="@+id/btn_next_control"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="下一页" />
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<!--&lt;!&ndash;四个界面&ndash;&gt;-->
+	<!--<LinearLayout-->
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="0dp"-->
+		<!--android:layout_weight="0.45"-->
+		<!--android:orientation="horizontal">-->
+
+		<!--<Button-->
+			<!--android:id="@+id/work"-->
+			<!--android:layout_width="fill_parent"-->
+			<!--android:layout_height="fill_parent"-->
+			<!--android:layout_weight="1"-->
+			<!--android:text="工作"-->
+			<!--android:textSize="12dp" />-->
+
+		<!--<Button-->
+			<!--android:id="@+id/status"-->
+			<!--android:layout_width="fill_parent"-->
+			<!--android:layout_height="fill_parent"-->
+			<!--android:layout_weight="1"-->
+			<!--android:text="状态"-->
+			<!--android:textSize="12dp" />-->
+
+		<!--&lt;!&ndash;<Button&ndash;&gt;-->
+			<!--&lt;!&ndash;android:id="@+id/setting"&ndash;&gt;-->
+			<!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+			<!--&lt;!&ndash;android:layout_height="fill_parent"&ndash;&gt;-->
+			<!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+			<!--&lt;!&ndash;android:text="设置"&ndash;&gt;-->
+			<!--&lt;!&ndash;android:textSize="12dp" />&ndash;&gt;-->
+
+		<!--<Button-->
+			<!--android:id="@+id/more"-->
+			<!--android:layout_width="fill_parent"-->
+			<!--android:layout_height="fill_parent"-->
+			<!--android:layout_weight="1"-->
+			<!--android:text="更多"-->
+			<!--android:textSize="12dp" />-->
+	<!--</LinearLayout>-->
+
+
+</LinearLayout>

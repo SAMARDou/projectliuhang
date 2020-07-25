@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 22
+    buildToolsVersion '28.0.2'
+
+    defaultConfig {
+        applicationId "android_serialport_api.sample"
+        minSdkVersion 11
+        targetSdkVersion 22
+
+        ndk {
+            moduleName "SerialPort"
+            ldLibs "log", "z", "m"
+        }
+        externalNativeBuild {
+            ndkBuild {
+                //指定 Application.mk 的路径
+                arguments "NDK_APPLICATION_MK:=E:\\ASworkspace\\20200228\\projectliuhang\\app\\src\\main\\jni/Application.mk"
+                //指定生成哪些平台的 so 文件
+                //abiFilters "armeabi-v7a", "armeabi"
+                //cFlags 和 cppFlags 是用来设置环境变量的, 一般不需要动
+                cFlags "-DTEST_C_FLAG1", "-DTEST_C_FLAG2"
+                cppFlags "-DTEST_CPP_FLAG2", "-DTEST_CPP_FLAG2"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug {
+            debuggable true
+        }
+    }
+    allprojects {
+        repositories {
+            jcenter()
+        }
+        parseLocalProperties()
+    }
+    tasks.all { task ->
+        if (task.name.startsWith('compile') && task.name.endsWith('Ndk')) {
+            task.enabled = false
+        }
+    }
+    externalNativeBuild {
+        ndkBuild {
+            //指定 Android.mk 的路径
+            path "E:\\ASworkspace\\20200228\\projectliuhang\\app\\src\\main\\jni/Android.mk"
+
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                // 此处指定生成的apk文件名
+                outputFileName = "projectliuhang.apk"
+            }
+    }
+
+}
+
+def parseLocalProperties() {
+    File file = rootProject.file('local.properties')
+    if (file.exists()) {
+
+
+        InputStream inputStream = rootProject.file('local.properties').newDataInputStream();
+        Properties properties = new Properties()
+        properties.load(inputStream)
+
+
+    } 
+}
+
+dependencies {
+    implementation files('src/libs/android-support-v4.jar')
+    //    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+}

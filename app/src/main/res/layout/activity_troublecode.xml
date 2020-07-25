@@ -1,0 +1,206 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_jk"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="当前故障"
+            android:textColor="#2a5caa"
+            android:textSize="20dp" />
+        <ImageView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line_bottom_long2"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="可疑参数编号(SPN)："
+                android:textColor="#2a5caa"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/SPN"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                
+                android:text="故障模式标志(FMI)："
+                android:textColor="#2a5caa"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/FMI"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="发生次数(OC)："
+                android:textColor="#2a5caa"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/OC"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                
+                android:text="转化方式(CM)："
+                android:textColor="#2a5caa"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/CM"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+
+            android:gravity="center"
+            android:textColor="#2a5caa"
+            android:textSize="20dp"
+            android:text="历史故障" />
+        <ImageView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line_bottom_long2"/>
+        
+        <TextView
+                android:id="@+id/SPN_history"
+                android:layout_width="fill_parent"
+		        android:layout_height="40dp"
+		        android:layout_margin="5dp"
+
+		        android:gravity="center"
+		        android:layout_weight="1"
+		        android:text="0"
+                android:textColor="#000000"
+		        android:textSize="20dp" />
+        
+        <TextView
+                android:id="@+id/FMI_history"
+                android:layout_width="fill_parent"
+		        android:layout_height="40dp"
+		        android:layout_margin="5dp"
+
+		        android:gravity="center"
+		        android:layout_weight="1"
+		        android:text="0"
+                android:textColor="#000000"
+		        android:textSize="20dp" />
+        
+        <TextView
+                android:id="@+id/OC_history"
+                android:layout_width="fill_parent"
+		        android:layout_height="40dp"
+		        android:layout_margin="5dp"
+
+		        android:gravity="center"
+		        android:layout_weight="1"
+		        android:text="0"
+                android:textColor="#000000"
+		        android:textSize="20dp" />
+        <TextView
+                android:id="@+id/CM_history"
+                android:layout_width="fill_parent"
+            android:layout_height="40dp"
+		        android:layout_margin="5dp"
+
+		        android:gravity="center"
+		        android:layout_weight="1"
+		        android:text="0"
+                android:textColor="#000000"
+		        android:textSize="20dp" />
+    </LinearLayout>
+</LinearLayout>
