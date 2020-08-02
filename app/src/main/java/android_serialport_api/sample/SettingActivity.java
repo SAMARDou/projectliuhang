@@ -104,31 +104,6 @@ public class SettingActivity extends Activity {
 
     String portPath = "/dev/ttyMT0";
 
-    //productKey = "替换自己的产品key"
-    public static String productKey = "202001";
-    //deviceName = "替换自己的产品deviceName"
-    public static String deviceName = "AndroidDevice1";
-    //deviceSecret = "替换自己的产品secret"
-    public static String deviceSecret = "123";
-    //property post topic
-    private static String pubTopic = "/sys/" + productKey + "/" + deviceName + "/thing/event/property/post";
-
-    private static final String payloadJson = "{\"id\":%s,\"params\":{" +
-            "\"frontPickinghead1Rs\": %s," +
-            "\"backPickinghead1Rs\": %s," +
-            "\"frontPickinghead2Rs\": %s," +
-            "\"backPickinghead2Rs\": %s," +
-            "\"frontPickinghead3Rs\": %s," +
-            "\"backPickinghead3Rs\": %s," +
-            "\"leftPickingheadInputRs\": %s," +
-            "\"frontPickinghead4Rs\": %s," +
-            "\"backPickinghead4Rs\": %s," +
-            "\"frontPickinghead5Rs\": %s," +
-            "\"backPickinghead5Rs\": %s," +
-            "\"frontPickinghead6Rs\": %s," +
-            "\"backPickinghead6Rs\": %s," +
-            "\"rightPickingheadInputRs\": %s},\"method\":\"thing.event.property.post\"}";
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

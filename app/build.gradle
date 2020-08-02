@@ -15,7 +15,7 @@ android {
         externalNativeBuild {
             ndkBuild {
                 //指定 Application.mk 的路径
-                arguments "NDK_APPLICATION_MK:=E:\\ASworkspace\\20200228\\projectliuhang\\app\\src\\main\\jni/Application.mk"
+                arguments "NDK_APPLICATION_MK:=F:\\ASworkspace\\projectliuhang\\app\\src\\main\\jni/Application.mk"
                 //指定生成哪些平台的 so 文件
                 //abiFilters "armeabi-v7a", "armeabi"
                 //cFlags 和 cppFlags 是用来设置环境变量的, 一般不需要动
@@ -48,7 +48,7 @@ android {
     externalNativeBuild {
         ndkBuild {
             //指定 Android.mk 的路径
-            path "E:\\ASworkspace\\20200228\\projectliuhang\\app\\src\\main\\jni/Android.mk"
+            path "F:\\ASworkspace\\projectliuhang\\app\\src\\main\\jni/Android.mk"
 
         }
     }
@@ -84,9 +84,8 @@ def parseLocalProperties() {
 }
 
 dependencies {
-    implementation files('src/libs/android-support-v4.jar')
-    //    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-
+    api fileTree(include: ['*.jar'], dir: 'libs')
+//    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
 }

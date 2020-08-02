@@ -85,43 +85,8 @@ public class WorkActivity extends Activity {
 	private SerialPort mSerialPort;
 	protected OutputStream mOutputStream;
 	protected InputStream mInputStream;
-	//private ReadThread mReadThread;
-
-	private MqttClient mqttClient = null;
 
 	public static String portPath = "/dev/ttyMT0";
-
-	//productKey = "替换自己的产品key"
-	public static String productKey = "202001";
-	//deviceName = "替换自己的产品deviceName"
-	public static String deviceName = "AndroidDevice1";
-	//deviceSecret = "替换自己的产品secret"
-	public static String deviceSecret = "123";
-
-	//property post topic
-	private static String pubTopic = "/sys/" + productKey + "/" + deviceName + "/thing/event/property/post";
-
-	private static final String payloadJson = "{\"id\":%s,\"params\":{" +
-			"\"paimiangunRotateSpeed\": %s," +
-			"\"suimiangunRotateSpeed\": %s," +
-			"\"chuanshudaiRotateSpeed\": %s," +
-			"\"chengmomadaRotateSpeed\": %s," +
-			"\"chengmozhijing\": %s," +
-			"\"baibizhouPressure\": %s," +
-			"\"shengyumoNum\": %s," +
-			"\"boxFull\": %s," +
-			"\"stateLight\": %s," +
-			"\"neutral\": %s," +
-			"\"lubricate\": %s," +
-			"\"lock\": %s," +
-			"\"imitate\": %s," +
-			"\"walkingSpeed\": %s," +
-			"\"fanRotatespeedLeft\": %s," +
-			"\"fanRotatespeedRight\": %s," +
-			"\"engineRotateSpeed\": %s," +
-			"\"waterPressure\": %s," +
-			"\"onlineWorking\": %s},\"method\":\"thing.event.property.post\"}";
-
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -183,9 +148,6 @@ public class WorkActivity extends Activity {
 		} catch (InvalidParameterException e) {
 			DisplayError(R.string.error_configuration);
 		}
-
-		initAliyunIoTClient();
-
 
 		//ReadThread线程封装在MyTask类里，并每隔50ms执行一次线程 delay:10表示从10ms后开始执行
 		//时间越短越会闪退，在保存can通信的情况下短时间不会发生闪退
@@ -313,55 +275,6 @@ public class WorkActivity extends Activity {
 //			}
 //		}
 //	}
-
-	/*
-	*
-	* 初始化Client对象
-	*
-	* */
-	private void initAliyunIoTClient() {
-		try {
-			//构建连接需要参数
-			String clientId = "androidthings" + System.currentTimeMillis();
-
-			Map<String, String> params = new HashMap<String, String>(16);
-			params.put("productKey", productKey);
-			params.put("deviceName", deviceName);
-			params.put("clientId", clientId);
-			String timestamp = String.valueOf(System.currentTimeMillis());
-			params.put("timestamp", timestamp);
-
-			String targetServer = "tcp://" + productKey + ".iot-as-mqtt.cn-shanghai.aliyuncs.com:1883";
-			//String targetServer = "tcp://106.14.149.8：3306";
-			String mqttclientId = clientId + "|securemode=3,signmethod=hmacsha1,timestamp=" + timestamp + "|";
-			String mqttUsername = deviceName + "&" + productKey;
-			String mqttPassword = AliyunIoTSignUtil.sign(params, deviceSecret, "hmacsha1");
-
-			connectMqtt(targetServer, mqttclientId, mqttUsername, mqttPassword);
-		} catch (Exception e) {
-			Log.e(TAG, "initAliyunIoTClient error " + e.getMessage(), e);
-		}
-	}
-
-	public void connectMqtt(String url, String clientId, String mqttUsername, String mqttPassword) throws Exception {
-
-		MemoryPersistence persistence = new MemoryPersistence();
-		mqttClient = new MqttClient(url, clientId, persistence);
-		MqttConnectOptions connOpts = new MqttConnectOptions();
-		// MQTT 3.1.1
-		connOpts.setMqttVersion(4);
-		connOpts.setAutomaticReconnect(true);
-		connOpts.setCleanSession(true);
-
-		connOpts.setUserName(mqttUsername);
-		connOpts.setPassword(mqttPassword.toCharArray());
-		connOpts.setKeepAliveInterval(60);
-
-		mqttClient.connect(connOpts);
-		Log.d(TAG, "connected " + url);
-
-	}
-
 
 	//定时读Run方法
 	class MyTask extends TimerTask {
@@ -663,18 +576,19 @@ public class WorkActivity extends Activity {
 		} else {
 			mIvOnlineworking.setImageDrawable(getResources().getDrawable(R.drawable.zaixian222));
 		}
-
-		//向云平台发送数据
-		postDeviceProperties();
-
 	}
 
 
 	//关闭串口
 	public void closeSerialPort() {
 		try {
-			mInputStream.close();
-			mOutputStream.close();
+			if(mInputStream!= null){
+				mInputStream.close();
+			}
+			if (mOutputStream != null){
+				mOutputStream.close();
+
+			}
 			if (mSerialPort != null) {
 				mSerialPort.close();
 				mSerialPort = null;
@@ -731,59 +645,4 @@ public class WorkActivity extends Activity {
 		return num & 0x1;
 	}
 
-
-	/*
-	payload格式
-	{
-	"id": 123243,
-	"params": {
-    "temperature": 25.6,
-    "humidity": 60.3,
-    "ch2o": 0.048
-    },
-    "method": "thing.event.property.post"
-    }
-    */
-	private void postDeviceProperties() {
-
-		try {
-
-			//上报数据
-			String payload = String.format(payloadJson, String.valueOf(System.currentTimeMillis()),
-					String.valueOf(paimiangunRotateSpeed),
-					String.valueOf(suimiangunRotateSpeed),
-					String.valueOf(chuanshudaiRotateSpeed),
-					String.valueOf(chengmomadaRotateSpeed),
-					String.valueOf(chengmozhijing),
-					String.valueOf(baibizhouPressure),
-					String.valueOf(shengyumoNum),
-					String.valueOf(boxFull),
-					String.valueOf(stateLight),
-					String.valueOf(neutral),
-					String.valueOf(lubricate),
-					String.valueOf(lock),
-					String.valueOf(imitate),
-					String.valueOf(walkingSpeed),
-					String.valueOf(fanRotatespeedLeft),
-					String.valueOf(fanRotatespeedRight),
-					String.valueOf(engineRotateSpeed),
-					String.valueOf(waterPressure),
-					String.valueOf(onlineWorking)
-					);
-
-			MqttMessage message = new MqttMessage(payload.getBytes("utf-8"));
-			message.setQos(1);
-
-			if (mqttClient == null) {
-				initAliyunIoTClient();
-			} else {
-				mqttClient.publish(pubTopic, message);
-				Log.d(TAG, "publish topic=" + pubTopic + ",payload=" + payload);
-			}
-
-		} catch (Exception e) {
-			Log.e(TAG, "postDeviceProperties error " + e.getMessage(), e);
-		}
-
-	}
 }

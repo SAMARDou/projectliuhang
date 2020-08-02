@@ -118,57 +118,6 @@ public class StatusActivity extends Activity {
 
     String portPath = "/dev/ttyMT0";
 
-    //productKey = "替换自己的产品key"
-    public static String productKey = "202001";
-    //deviceName = "替换自己的产品deviceName"
-    public static String deviceName = "AndroidDevice1";
-    //deviceSecret = "替换自己的产品secret"
-    public static String deviceSecret = "123";
-    //property post topic
-    private static String pubTopic = "/sys/" + productKey + "/" + deviceName + "/thing/event/property/post";
-
-    private static final String payloadJson = "{\"id\":%s,\"params\":{" +
-            "\"suckGate1\": %s," +
-            "\"suckGate2\": %s," +
-            "\"suckGate3\": %s," +
-            "\"suckGate4\": %s," +
-            "\"suckGate5\": %s," +
-            "\"suckGate6\": %s," +
-            "\"waterPressureWarn\": %s," +
-            "\"clutch1\": %s," +
-            "\"clutch2\": %s," +
-            "\"clutch3\": %s," +
-            "\"clutch4\": %s," +
-            "\"clutch5\": %s," +
-            "\"clutch6\": %s," +
-            "\"zhongweiWarn\": %s," +
-            "\"airfilterWarn\": %s," +
-            "\"fanWarn\": %s," +
-            "\"oilTemp\": %s," +
-            "\"areaSubtotal\": %s," +
-            "\"areaTotal\": %s," +
-            "\"augerSpeed\": %s," +
-            "\"augerPressure\": %s," +
-            "\"dischargeCottonWarn\": %s," +
-            "\"totallTrouble\": %s," +
-            "\"hopperLeftTrouble\": %s," +
-            "\"hopperRightTrouble\": %s," +
-            "\"frontWarehouseLeftTrouble\": %s," +
-            "\"frontWarehouseRightTrouble\": %s," +
-            "\"augerTrouble\": %s," +
-            "\"augerSpeedTrouble\": %s," +
-            "\"augerPressureTrouble\": %s," +
-            "\"weimianmadaTrouble\": %s," +
-            "\"suimianmadaTrouble\": %s," +
-            "\"paimianmadaTrouble\": %s," +
-            "\"packingPumpTrouble\": %s," +
-            "\"latchLockTrouble\": %s," +
-            "\"latchLockOpen\": %s," +
-            "\"chucangxiangman\": %s," +
-            "\"chanmoxiangman\": %s},\"method\":\"thing.event.property.post\"}";
-
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
