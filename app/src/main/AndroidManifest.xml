@@ -34,12 +34,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SerialPortPreferences" />
-        <activity android:name=".ConsoleActivity" />
-        <activity android:name=".LoopbackActivity" />
-        <activity android:name=".Sending01010101Activity" />
         <activity android:name="GpsActivity"></activity>
-        <activity android:name=".TroublecodeActivity" />
-        <activity android:name=".coSetActivity" />
         <activity
             android:name=".WorkActivity"
             android:configChanges="orientation|keyboardHidden"
